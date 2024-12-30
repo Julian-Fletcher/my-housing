@@ -1,0 +1,16 @@
+CREATE TABLE student (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	pawprint VARCHAR(6) UNIQUE NOT NULL,
+	first_name VARCHAR(20) NOT NULL,
+	middle_init CHAR(1),
+	last_name VARCHAR(20) NOT NULL,
+	pref_name VARCHAR(20) NOT NULL,
+	email VARCHAR(17) NOT NULL UNIQUE,
+	phone VARCHAR(12),
+	ra_id INT
+);
+
+ALTER TABLE student
+ADD CONSTRAINT fk_ra
+FOREIGN KEY (ra_id) REFERENCES resident_advisor(id)
+ON DELETE SET NULL;

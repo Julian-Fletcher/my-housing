@@ -1,0 +1,7 @@
+CREATE TABLE residence_hall (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(60),
+	address VARCHAR(120) NOT NULL,
+	rooms INT NOT NULL,
+	floors INT DEFAULT 1 NOT NULL
+);
